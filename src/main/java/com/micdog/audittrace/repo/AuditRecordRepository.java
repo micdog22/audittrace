@@ -1,0 +1,1 @@
+package com.micdog.audittrace.repo; import com.micdog.audittrace.model.AuditRecord; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface AuditRecordRepository extends JpaRepository<AuditRecord,Long>{ List<AuditRecord> findTop100ByTenantOrderByTsDesc(String tenant); List<AuditRecord> findByTenantOrderByTsAsc(String tenant);}
